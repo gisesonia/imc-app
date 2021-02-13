@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,38 +8,63 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/titleTXT"
         style="@style/title_purple"
-        android:textSize="48sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/titulo"/>
+        android:layout_marginTop="10dp"
+        android:text="@string/titulo"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/pesoEDT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/pesoEDT"
+        style="@style/input_style"
         android:layout_width="match_parent"
-        android:hint="@string/hint_edittext"
         android:layout_height="wrap_content"
-        style="@style/input_style" />
+        android:layout_marginTop="10dp"
 
+        android:layout_marginBottom="5dp"
+        android:hint="@string/hint_edittext"
+        app:layout_constraintBottom_toTopOf="@+id/alturaEDT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTXT" />
 
     <EditText
         android:id="@+id/alturaEDT"
         style="@style/input_style"
+        android:layout_width="216dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:hint="@string/hint_edt_altura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintBottom_toTopOf="@+id/calcularBTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pesoEDT" />
 
     <Button
         android:id="@+id/calcularBTN"
-        android:backgroundTint="@android:color/holo_green_light"
-        android:padding="16dp"
-        android:textSize="16sp"
-        android:layout_marginTop="46dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:padding="16dp"
         android:text="@string/texto_btn"
-        />
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alturaEDT"
+        app:layout_constraintVertical_bias="0.748" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
