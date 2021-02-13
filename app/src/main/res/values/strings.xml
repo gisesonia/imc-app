@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">imc-app</string>
+    <string name="titulo">IMC</string>
+    <string name="hint_edittext">Insira seu peso (65.8 kg)</string>
+    <string name="texto_btn">Calcular</string>
+    <string name="hint_edt_altura">Insira a sua altura (1.78 m)</string>
 </resources>
