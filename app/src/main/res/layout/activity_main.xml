@@ -4,67 +4,110 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1D1F27"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
-    <TextView
-        android:id="@+id/titleTXT"
-        style="@style/title_purple"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/titulo"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toTopOf="@+id/pesoEDT"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/pesoEDT"
-        style="@style/input_style"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-
-        android:layout_marginBottom="5dp"
-        android:hint="@string/hint_edittext"
-        app:layout_constraintBottom_toTopOf="@+id/alturaEDT"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTXT" />
-
-    <EditText
-        android:id="@+id/alturaEDT"
-        style="@style/input_style"
-        android:layout_width="216dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:hint="@string/hint_edt_altura"
-        app:layout_constraintBottom_toTopOf="@+id/calcularBTN"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Result_card"
+        android:layout_width="242dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="68dp"
+        android:layout_weight="0.5"
+        app:cardBackgroundColor="#282B35"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/titleTXT"
+            style="@style/title_purple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/titulo"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Width_card"
+        android:layout_width="177dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_weight="0.5"
+        app:cardBackgroundColor="#282B35"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="6dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pesoEDT" />
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <EditText
+            android:id="@+id/pesoEDT"
+            style="@style/input_style"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical|fill_vertical"
+            android:hint="@string/hint_edittext"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Height_card"
+        android:layout_width="174dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="0.5"
+        app:cardBackgroundColor="#282B35"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.793"
+        app:layout_constraintStart_toEndOf="@+id/Width_card"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <EditText
+            android:id="@+id/alturaEDT"
+            style="@style/input_style"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical|fill_vertical"
+            android:hint="@string/hint_edt_altura"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+
+    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/calcularBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:backgroundTint="@android:color/holo_green_light"
+        android:layout_width="224dp"
+        android:layout_height="94dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="#302B47"
         android:padding="16dp"
         android:text="@string/texto_btn"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="24sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/Result_card"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/alturaEDT"
-        app:layout_constraintVertical_bias="0.748" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
