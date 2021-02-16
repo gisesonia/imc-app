@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1D1F27"
+    android:background="#1d1f27"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -15,7 +15,7 @@
         android:layout_height="140dp"
         android:layout_marginBottom="68dp"
         android:layout_weight="0.5"
-        app:cardBackgroundColor="#282B35"
+        app:cardBackgroundColor="#282b35"
         app:cardCornerRadius="6dp"
         app:cardElevation="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,12 +42,24 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="64dp"
         android:layout_weight="0.5"
-        app:cardBackgroundColor="#282B35"
+        app:cardBackgroundColor="#282b35"
         app:cardCornerRadius="6dp"
         app:cardElevation="6dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/pesoTXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="5dp"
+            android:text="Peso"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#5F5868"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/pesoEDT"
@@ -71,7 +83,7 @@
         android:layout_marginTop="64dp"
         android:layout_marginEnd="10dp"
         android:layout_weight="0.5"
-        app:cardBackgroundColor="#282B35"
+        app:cardBackgroundColor="#282b35"
         app:cardCornerRadius="6dp"
         app:cardElevation="6dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,6 +91,18 @@
         app:layout_constraintStart_toEndOf="@+id/Width_card"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/alturaTXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="5dp"
+            android:text="Altura"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#5F5868"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/alturaEDT"
@@ -99,8 +123,8 @@
         android:id="@+id/calcularBTN"
         android:layout_width="224dp"
         android:layout_height="94dp"
-        android:layout_marginBottom="80dp"
-        android:backgroundTint="#730885"
+        android:layout_marginBottom="76dp"
+        android:backgroundTint="#540B61"
         android:padding="16dp"
         android:text="@string/texto_btn"
         android:textSize="24sp"
