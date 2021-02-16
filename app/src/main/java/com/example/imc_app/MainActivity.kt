@@ -2,6 +2,7 @@ package com.example.imc_app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.core.widget.doAfterTextChanged
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -33,6 +34,8 @@ class MainActivity : AppCompatActivity() {
         if(peso != null && altura != null) {
             val imc = peso / (altura * altura)
             titleTXT.text = "Seu IMC %.2f".format(imc)
+        } else {
+            Toast.makeText(this, "Digite a altura e o peso", Toast.LENGTH_LONG).show()
         }
     }
 }
